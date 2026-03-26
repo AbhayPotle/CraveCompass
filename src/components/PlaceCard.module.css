@@ -1,0 +1,227 @@
+.cardLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 0.4s ease-out forwards;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(245, 158, 11, 0.15);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--primary);
+  opacity: 0.8;
+  border-radius: 4px 0 0 4px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.name {
+  font-size: 1.5rem;
+  color: var(--text-main);
+  line-height: 1.2;
+}
+
+.ratingBadge {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.4rem 0.75rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  white-space: nowrap;
+}
+
+.star {
+  color: var(--text-accent);
+  font-size: 1.1rem;
+}
+
+.ratingNumber {
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.reviews {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-left: 4px;
+}
+
+.tagsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.categoryTag, .priceTag, .attributeTag {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.categoryTag {
+  background: rgba(236, 72, 153, 0.15);
+  color: var(--secondary);
+  border: 1px solid rgba(236, 72, 153, 0.2);
+}
+
+.priceTag {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.attributeTag {
+  background: var(--surface-hover);
+  color: var(--text-muted);
+  border: 1px solid var(--surface-border);
+}
+
+.smartTag {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--primary);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.sensorySectionContainer {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: var(--radius-sm);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+/* Base glow when card is hovered */
+.card:hover .sensorySectionContainer {
+  border-color: rgba(245, 158, 11, 0.3);
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.05) 0%, transparent 100%);
+}
+
+.sensorySectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.sensorySectionHeader h4 {
+  font-size: 0.95rem;
+  margin: 0;
+  color: var(--primary);
+  letter-spacing: 0.5px;
+}
+
+.tastePreview {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  font-style: italic;
+  color: #e2e8f0;
+  transition: var(--transition);
+}
+
+.taste3DDetails {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out, opacity 0.3s ease-out, margin-top 0.3s ease-out;
+}
+
+/* Expand the 3D details only when hovered or active */
+.card:hover .taste3DDetails {
+  max-height: 250px;
+  opacity: 1;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.taste3DDetails ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.taste3DDetails li {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  line-height: 1.4;
+}
+
+.taste3DDetails li strong {
+  color: var(--text-main);
+  font-weight: 500;
+  margin-right: 0.25rem;
+}
+
+.detailsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.smallHeading {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.3rem;
+}
+
+.dishesList {
+  font-weight: 600;
+  color: var(--text-main);
+  font-size: 0.95rem;
+}
+
+.highlightBox p {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+.footer {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--surface-border);
+}
+
+.bestFor {
+  font-size: 0.85rem;
+  color: var(--primary);
+  font-weight: 500;
+}
