@@ -161,7 +161,7 @@ This project was developed using **Vibe Coding (Antigravity)**:
 ## 📸 UI Preview
 
 <p align="center">
-  <img src="YOUR_SCREENSHOT_LINK_HERE" width="800"/>
+  <img src="https://raw.githubusercontent.com/AbhayPotle/CraveCompass/main/public/screenshot.png" width="800"/>
 </p>
 
 ---
